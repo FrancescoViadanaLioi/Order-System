@@ -1,0 +1,21 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache
+.vs/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.rsuser
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+
+# Logs
+*.log
