@@ -1,5 +1,5 @@
 ﻿using System;
-using OrderSystem.Services.Validations;
+using OrderSystem.Services.Validators;
 
 namespace OrderSystem.Entities
 {
@@ -11,9 +11,9 @@ namespace OrderSystem.Entities
 
         public Client(string name, string email, DateTime birthDate)
         {
-            if (!ClientValidations.IsValidName(name)) throw new ArgumentException("This name is invalid.");
-            if (!ClientValidations.IsValidEmail(email)) throw new ArgumentException("This email is invalid.");
-            if (!ClientValidations.IsValidBirthDate(birthDate)) throw new ArgumentException("This birth date is invalid.");
+            if (!ClientValidators.IsValidName(name)) throw new ArgumentException("This name is invalid.");
+            if (!ClientValidators.IsValidEmail(email)) throw new ArgumentException("This email is invalid.");
+            if (!ClientValidators.IsValidBirthDate(birthDate)) throw new ArgumentException("This birth date is invalid.");
             Name = name;
             Email = email;
             BirthDate = birthDate;
