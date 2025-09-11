@@ -35,11 +35,13 @@ class Program
 
             int productQuantity = ProductInput.QuantityInput(productName);
 
-            OrderItem orderItem = new OrderItem(productQuantity, productPrice);
+            OrderItem orderItem = new OrderItem(productQuantity, products[i - 1], productPrice);
 
             order.AddItem(orderItem);
         }
+        Console.WriteLine();
         Console.WriteLine("Order summary:");
+        Console.WriteLine();
         Console.WriteLine(order.ToString());
         ConsoleUI.ShowInfo("End of the program.");
     }
