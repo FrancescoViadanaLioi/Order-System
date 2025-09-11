@@ -16,5 +16,14 @@ namespace OrderSystem.View
                 "This status doesn't exist in our system.");
             return status;
         }
+        public static int OrderQuantityInput()
+        {
+            int quantity = InputHelper.GetValidatedInput(
+                "How many items will be in this order? ",
+                input => OrderValidator.IsValidItemsInOrder(input),
+                input => int.Parse(input),
+                "It has to be at least one item in the order.");
+            return quantity;
+        }
     }
 }
