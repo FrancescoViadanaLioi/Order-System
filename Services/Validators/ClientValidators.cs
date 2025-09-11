@@ -28,9 +28,9 @@ namespace OrderSystem.Services.Validators
                 return false;
             }
         }
-        public static bool IsValidBirthDate(string input, out DateTime date)
+        public static bool IsValidBirthDate(string input)
         {
-            if (!DateTime.TryParseExact(input, "dd/MM/yyyy" ,CultureInfo.InvariantCulture, DateTimeStyles.None, out date)) return false;
+            if (!DateTime.TryParseExact(input, "dd/MM/yyyy" ,CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime date)) return false;
 
             int age = DateTime.Now.Year - date.Year;
             if (date.Year < 1920 || age < 18) return false;
