@@ -12,7 +12,7 @@ namespace OrderSystem.View
             OrderStatus status = InputHelper.GetValidatedInput(
                 "Status: ",
                 input => !string.IsNullOrWhiteSpace(input) && OrderValidator.IsValidStatus(input),
-                input => Enum.Parse<OrderStatus>(input),
+                input => Enum.Parse<OrderStatus>(input, ignoreCase : true),
                 "This status doesn't exist in our system.");
             return status;
         }
