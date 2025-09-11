@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Text;
 using OrderSystem.Services.Validators;
 
@@ -16,13 +15,6 @@ namespace OrderSystem.Entities
             if (!ProductValidator.IsValidPrice(price)) throw new ArgumentException("The price must be a number higher than 0.");
             Name = name;
             Price = price;
-        }
-        public override string ToString()
-        {
-            StringBuilder sb = new StringBuilder();
-            sb.Append(Name);
-            sb.AppendLine($"${Price.ToString("F2", CultureInfo.InvariantCulture)}");
-            return sb.ToString();
         }
     }
 }
