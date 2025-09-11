@@ -13,5 +13,9 @@ namespace OrderSystem.Services.Validators
         {
             return Enum.TryParse<OrderStatus>(input, ignoreCase: true, out OrderStatus status);
         }
+        public static bool IsValidItemsInOrder(string input)
+        {
+            return int.TryParse(input, out int quantity) && quantity > 0;
+        }
     }
 }
