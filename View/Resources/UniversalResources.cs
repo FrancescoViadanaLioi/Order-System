@@ -22,4 +22,21 @@ namespace OrderSystem.View.Resources
             return value.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
+    internal static class InputHelper
+    {
+        public static T GetValidatedInput<T>(
+            string prompt,
+            Func<string, bool> validator,
+            Func<string, T> converter,
+            string errorMessage)
+        {
+            while (true)
+            {
+                string? input = DataInput.AskForInput(prompt);
+                if (input != null && validator(input)) return converter(input);
+                ConsoleUI.ShowError(errorMessage);
+            }
+        }
+        
+    }
 }
