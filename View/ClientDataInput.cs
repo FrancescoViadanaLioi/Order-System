@@ -12,7 +12,7 @@ namespace OrderSystem.View
             string name = InputHelper.GetValidatedInput(
                 "Enter with the client's name: ",
                 input => !string.IsNullOrWhiteSpace(input) && ClientValidators.IsValidName(input),
-                input => input!,
+                input => input,
                 "This name cannot be set.");
             return name;
         }
@@ -21,7 +21,7 @@ namespace OrderSystem.View
             string email = InputHelper.GetValidatedInput(
                 "Enter with the client's email: ",
                 input => !string.IsNullOrWhiteSpace(input) && ClientValidators.IsValidEmail(input),
-                input => input!,
+                input => input,
                 "This email is not valid.");
             return email;
         }
