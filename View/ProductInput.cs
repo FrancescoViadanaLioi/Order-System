@@ -28,7 +28,7 @@ namespace OrderSystem.View
                 "Enter with a valid price, which is only numbers above 0.");
             return price;
         }
-        public static int Quantity(string productName)
+        public static int QuantityInput(string productName)
         {
             int quantity = InputHelper.GetValidatedInput(
                 $"How many units of the product {productName} are being ordered? ",
