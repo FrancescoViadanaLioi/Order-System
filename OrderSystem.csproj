@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="View - Cópia\**" />
+    <EmbeddedResource Remove="View - Cópia\**" />
+    <None Remove="View - Cópia\**" />
+  </ItemGroup>
+
 </Project>
