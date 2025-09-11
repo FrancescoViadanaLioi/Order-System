@@ -40,7 +40,7 @@ namespace OrderSystem.Entities
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine($"Moment: {Moment.ToString("dd/MM/yyyy HH:mm:ss")}");
-            sb.AppendLine($"Order status: {Status}");
+            sb.AppendLine($"Order status: {Status.ToString()}");
             sb.AppendLine($"Client: {Client.Name} ({Client.BirthDate}) - email: {Client.Email}");
             sb.AppendLine("Order items:");
 

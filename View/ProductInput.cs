@@ -22,7 +22,7 @@ namespace OrderSystem.View
         public static double PriceInput()
         {
             double price = InputHelper.GetValidatedInput(
-                "Enter with the product's price: ",
+                "Enter with the product's price: $",
                 input => ProductValidator.IsValidPrice(input),
                 input => double.Parse(input),
                 "Enter with a valid price, which is only numbers above 0.");
