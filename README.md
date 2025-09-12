@@ -32,7 +32,7 @@ This project demonstrates object-oriented design, input validation, and modular 
 
 3. Build and run the project: 
 ```powershell
-dotnet new console -n MeuProjeto
+dotnet new console -n MyProject
 cd MeuProjeto
 dotnet run
 ```
