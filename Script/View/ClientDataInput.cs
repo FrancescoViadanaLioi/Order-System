@@ -28,7 +28,7 @@ namespace OrderSystem.View
         public static DateTime BirthDateInput()
         {
             DateTime birthDate = InputHelper.GetValidatedInput(
-                "Enter with the client's birthday (dd/MM/yyyy format): ",
+                "Enter with the client's birth date (dd/MM/yyyy format): ",
                 input => ClientValidators.IsValidBirthDate(input),
                 input => DateTime.Parse(input),
                 "This birthdate is not valid.");
