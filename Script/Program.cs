@@ -27,7 +27,7 @@ class Program
 
         for (int i = 1; i <= itemsInOrder; i++)
         {
-            Console.WriteLine($"Enter with {i}# item data:");
+            Console.WriteLine($"Enter with #{i} item data:");
             string productName = ProductInput.NameInput();
             double productPrice = ProductInput.PriceInput();
 
